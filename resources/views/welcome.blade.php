@@ -9,7 +9,7 @@
                 <div class="functions">
                     <ul class="ms-li">
                         <li class="mb-5">
-                            <a class="ms-link ms-white" href="#"><i class="fa-regular fa-calendar-days me-2 ms-white"></i>Calendar</a>
+                            <a class="ms-link ms-white" href="{{route('admin.events.index')}}"><i class="fa-regular fa-calendar-days me-2 ms-white"></i>Calendar</a>
                         </li>
                         <li class="my-5">
                             <a class="ms-link ms-white" href="#"><i class="fa-solid fa-list-check me-2 ms-white"></i>To Do List</a>
