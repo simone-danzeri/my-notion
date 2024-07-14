@@ -8,7 +8,7 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>DeliveBoo</title>
+    <title>My Notion</title>
 
     <!-- Fontawesome 6 cdn -->
     <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css' integrity='sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==' crossorigin='anonymous' referrerpolicy='no-referrer' />
@@ -55,13 +55,18 @@
                 <nav id="sidebarMenu" class="col-md-3 col-lg-2 d-md-block ms-bg-primary sidebar collapse">
                     <div class="position-sticky pt-3">
                         @if (!Route::is('admin.dashboard'))
-                        <a href="{{ route('admin.dashboard')}}" class="d-block btn ml-2 border border-light my-3 text-white">
-                            Back to Dashboard
-                        </a>
+                            <a href="{{ route('admin.dashboard')}}" class="d-block btn ml-2 border border-light my-3 text-white">
+                                Back to Dashboard
+                            </a>
                         @else
-                        <a href="{{ route('home')}}" class="d-block btn ml-2 border border-light my-3 text-white">
-                            Back to Homepage
-                        </a>
+                            <a href="{{ route('home')}}" class="d-block btn ml-2 border border-light my-3 text-white">
+                                Back to Homepage
+                            </a>
+                        @endif
+                        @if (!Route::is('admin.events.create'))
+                            <a href="{{ route('admin.events.create')}}" class="d-block btn ml-2 border border-light my-3 text-white">
+                                Create a new event
+                            </a>
                         @endif
                     </div>
                 </nav>

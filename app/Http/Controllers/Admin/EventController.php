@@ -26,7 +26,7 @@ class EventController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.events.create');
     }
 
     /**
@@ -35,9 +35,13 @@ class EventController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Event $event)
     {
-        //
+        $formData = $request->all();
+        $newEvent = new Event();
+        $newEvent->fill($formData);
+        $newEvent->save();
+        return redirect()->route('admin.events.index');
     }
 
     /**
