@@ -18,8 +18,8 @@
                     <h1>Hello {{ $user->name }}!</h1>
                 </div>
             </div>
-            <div class="functions">
-                <ul class="ms-li">
+            <div class="functions my-5">
+                <ul class="ms-li p-0">
                     <li class="mb-5">
                         <a class="" href="{{route('admin.events.index')}}"><i class="fa-regular fa-calendar-days me-2"></i>Calendar</a>
                     </li>

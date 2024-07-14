@@ -17,6 +17,12 @@
 
 .ms-li{
     list-style: none;
+    li{
+        a{
+            text-decoration: none;
+            color: $main_color;
+        }
+    }
 }
 
 .ms-margin-top{

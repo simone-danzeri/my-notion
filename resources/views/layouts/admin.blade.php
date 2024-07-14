@@ -68,6 +68,11 @@
                                 Create a new event
                             </a>
                         @endif
+                        @if (!Route::is('admin.events.index'))
+                            <a href="{{ route('admin.events.index')}}" class="d-block btn ml-2 border border-light my-3 text-white">
+                                Calendar
+                            </a>
+                        @endif
                     </div>
                 </nav>
 
