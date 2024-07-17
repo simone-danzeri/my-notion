@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Admin;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
+use App\Models\Grocery;
 
 class GroceryController extends Controller
 {
@@ -14,7 +15,8 @@ class GroceryController extends Controller
      */
     public function index()
     {
-        //
+        $groceries = Grocery::all();
+        return view('admin.groceries.index', compact('groceries'));
     }
 
     /**
@@ -35,7 +37,17 @@ class GroceryController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $formData = $request->all();
+        $newGrocery = new Grocery();
+        $newGrocery->fill($formData);
+        if(!$request->has('is_vegetarian')) {
+            $newGrocery->is_vegetarian = 0;
+        } else {
+            $newGrocery->is_vegetarian = 1;
+        }
+        $newGrocery->save();
+        // session()->flash('message', 'Product successfully added.');
+        return redirect()->route('admin.groceries.index');
     }
 
     /**

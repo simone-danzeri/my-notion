@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\EventController;
+use App\Http\Controllers\Admin\GroceryController;
 
 /*
 |--------------------------------------------------------------------------
@@ -31,6 +32,7 @@ Route::middleware(['auth', 'verified'])
     Route::get('/dashboard', [DashboardController::class, 'index'])->name('dashboard');
     Route::get('/negate-access', [DashboardController::class, 'negate'])->name('negate');
     Route::resource('events', EventController::class);
+    Route::resource('groceries', GroceryController::class);
 });
 
 Route::middleware('auth')->group(function () {

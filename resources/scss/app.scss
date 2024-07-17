@@ -36,3 +36,14 @@
     padding: 10px;
     margin: 10px;
 }
+
+.ms-btn{
+    border: none;
+    padding: 7px 10px;
+    border-radius: 10px;
+    background-color: $main_color;
+    color: antiquewhite;
+    &:hover{
+        background-color: green;
+    }
+}

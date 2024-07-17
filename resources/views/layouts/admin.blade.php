@@ -32,7 +32,7 @@
             </button>
             <a class="navbar-brand col-md-3 col-lg-2 me-0 px-3 text-white" href="/">
                 <div class="logo-deliveboo">
-                    <img src="{{ asset('delivebooLogo.svg') }}" alt="" class="w-100">
+                    My Notion
                 </div>
             </a>
             <div class="navbar-nav">
@@ -71,6 +71,11 @@
                         @if (!Route::is('admin.events.index'))
                             <a href="{{ route('admin.events.index')}}" class="d-block btn ml-2 border border-light my-3 text-white">
                                 Calendar
+                            </a>
+                        @endif
+                        @if (Route::is('admin.groceries.index'))
+                            <a href="{{ route('admin.events.index')}}" class="d-block btn ml-2 border border-light my-3 text-white">
+                                Empty grocery list
                             </a>
                         @endif
                     </div>
