@@ -29,6 +29,9 @@
                     <li class="my-5">
                         <a class="" href="#"><i class="fa-solid fa-diagram-project me-2"></i>Projects</a>
                     </li>
+                    <li class="my-5">
+                        <a class="" href="#"><i class="fa-solid fa-list-check me-2"></i>Shopping List</a>
+                    </li>
                 </ul>
             </div>
         </div>
