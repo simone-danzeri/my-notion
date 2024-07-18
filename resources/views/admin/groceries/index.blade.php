@@ -62,7 +62,7 @@
     createApp({
         data(){
             return {
-                message: "Dio cane"
+                message: "test"
             };
         },
     })
