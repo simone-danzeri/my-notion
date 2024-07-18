@@ -21,6 +21,9 @@
 
     @vite(['resources/js/app.js'])
 
+    <!--Vue Js link-->
+    <script src="https://unpkg.com/vue@3"></script>
+    <!--Vue Js link-->
 </head>
 
 <body>
@@ -74,9 +77,9 @@
                             </a>
                         @endif
                         @if (Route::is('admin.groceries.index'))
-                            <a href="{{ route('admin.events.index')}}" class="d-block btn ml-2 border border-light my-3 text-white">
+                            <div class="d-block btn ml-2 border border-light my-3 text-white">
                                 Empty grocery list
-                            </a>
+                            </div>
                         @endif
                     </div>
                 </nav>
@@ -91,3 +94,7 @@
 
 
 </html>
+
+<script>
+
+</script>

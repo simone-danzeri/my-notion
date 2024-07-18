@@ -94,4 +94,11 @@ class GroceryController extends Controller
     {
         //
     }
+
+    public function eliminateAll() {
+        dd('ciao');
+        Grocery::truncate();
+        // DB::table('groceries')->truncate($request->all());
+        return redirect()->route('admin.groceries.index');
+    }
 }

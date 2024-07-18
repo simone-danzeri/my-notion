@@ -1,8 +1,5 @@
 @extends('layouts.admin')
 @section('content')
-    <!--Vue Js link-->
-    <script src="https://unpkg.com/vue@3"></script>
-    <!--Vue Js link-->
     <h1 class="text-center">My Grocery List</h1>
     <div id="app">
         <table class="table mt-5">
@@ -48,9 +45,27 @@
                 </div>
             </form>
         </div>
+        {{this.message}}
+        {{-- NON FUNZIONA --}}
+        <div class="delete-btn">
+            <form action="">
+                <button class="btn btn-danger js-delete-btn" onclick="return confirm('Sei sicuro di voler eliminare tutti i dati?')" data-grocery-title="{{ $groceries }}" type="submit">Delete</button>
+            </form>
+        </div>
+        {{-- NON FUNZIONA --}}
     </div>
 @endsection
 
+@section('scripts')
 <script>
-
+    const { createApp } = Vue;
+    createApp({
+        data(){
+            return {
+                message: "Dio cane"
+            };
+        },
+    })
 </script>
+@endsection
+

@@ -33,6 +33,7 @@ Route::middleware(['auth', 'verified'])
     Route::get('/negate-access', [DashboardController::class, 'negate'])->name('negate');
     Route::resource('events', EventController::class);
     Route::resource('groceries', GroceryController::class);
+    Route::delete('groceries/eliminate-all', [GroceryController::class, 'eliminateAll'])->name('groceries.eliminateAll');
 });
 
 Route::middleware('auth')->group(function () {

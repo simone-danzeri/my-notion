@@ -18,6 +18,10 @@
 
     <!-- Usando Vite -->
     @vite(['resources/js/app.js'])
+
+    <!--Vue Js link-->
+    <script src="https://unpkg.com/vue@3"></script>
+    <!--Vue Js link-->
 </head>
 
 <body class="ms-bg-primary">
@@ -83,6 +87,7 @@
             @yield('content')
         </main>
     </div>
+    @yield('scripts')
 </body>
 
 </html>
