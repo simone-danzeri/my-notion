@@ -14,7 +14,7 @@
                 @foreach ($groceries as $eachGrocery)
                     <tr>
                         <td>
-                            <input type="checkbox" name="added" id="added">
+                            <input type="checkbox" name="added" id="added" class="js-checked">
                         </td>
                         <td>{{ $eachGrocery->product }}</td>
                         <td>
@@ -53,9 +53,24 @@
         </div>
         {{-- NON FUNZIONA --}}
     </div>
+    {{-- JS per le checkbox laterali --}}
+    <script>
+        const allSideCheckboxes = document.querySelectorAll('.js-checked');
+        allSideCheckboxes.forEach((sideCheckbox) => {
+            sideCheckbox.addEventListener('click', function(event) {
+                if(this.parentElement.parentElement.classList.contains("disabled")) {
+                    this.parentElement.parentElement.classList.remove("disabled");
+                } else {
+                    this.parentElement.parentElement.classList.add("disabled");
+                }
+            })
+        })
+    </script>
 @endsection
 
-@section('scripts')
+
+
+{{-- @section('scripts')
 <script>
     const { createApp } = Vue;
     createApp({
@@ -66,5 +81,5 @@
         },
     })
 </script>
-@endsection
+@endsection --}}
 
