@@ -87,7 +87,8 @@
             @yield('content')
         </main>
     </div>
-    @yield('scripts')
+    {{-- @yield('scripts') --}}
+    @stack('scripts')
 </body>
 
 </html>

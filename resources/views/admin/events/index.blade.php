@@ -36,7 +36,14 @@
                 <div class="card-text fw-lighter mt-4 mb-2">
                     <small>Created at: {{ $event->created_at }}</small>
                 </div>
-                <a href="{{route('admin.events.edit', ['event' => $event->id])}}" class="btn btn-warning">Edit</a>
+                <div class="actions d-flex justify-content-start gap-2">
+                    <a href="{{route('admin.events.edit', ['event' => $event->id])}}" class="btn btn-warning">Edit</a>
+                    <form enctype="multipart/form-data" action="{{route('admin.events.destroy', ['event' => $event->id])}}" method="post">
+                        @csrf
+                        @method('DELETE')
+                        <button type="submit" onclick="return confirm('Sei sicuro di voler eliminare questo evento?')" class="btn btn-danger">Done</button>
+                    </form>
+                </div>
             </div>
         </div>
         @endforeach

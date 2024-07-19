@@ -29,8 +29,8 @@
                     <input type="date" class="form-control" id="end" name="end" required>
                 </div>
                 <div class="mb-3">
-                    <label for="location" class="form-label">Where *</label>
-                    <input type="text" class="form-control" id="location" name="location" required maxlength="255">
+                    <label for="location" class="form-label">Where</label>
+                    <input type="text" class="form-control" id="location" name="location" maxlength="255">
                 </div>
                 <button type="submit" class="btn btn-primary">SAVE</button>
             </form>

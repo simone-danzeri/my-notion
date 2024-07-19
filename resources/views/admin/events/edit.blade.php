@@ -30,8 +30,8 @@
                     <input type="date" class="form-control" id="end" name="end" value="{{ old('end', $event->end) }}" required>
                 </div>
                 <div class="mb-3">
-                    <label for="location" class="form-label">Where *</label>
-                    <input type="text" class="form-control" id="location" name="location" value="{{ old('location', $event->location) }}" required maxlength="255">
+                    <label for="location" class="form-label">Where</label>
+                    <input type="text" class="form-control" id="location" name="location" value="{{ old('location', $event->location) }}" maxlength="255">
                 </div>
                 <button type="submit" class="btn btn-primary my-3">SAVE</button>
             </form>
