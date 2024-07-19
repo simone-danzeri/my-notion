@@ -73,9 +73,12 @@ class EventController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, $id)
+    public function update(Request $request, Event $event)
     {
-        //
+        $formData = $request->all();
+        $event->update($formData);
+        session()->flash('message', 'Event successfully edited!');
+        return redirect()->route('admin.events.index');
     }
 
     /**

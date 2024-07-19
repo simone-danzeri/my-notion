@@ -45,7 +45,6 @@
                 </div>
             </form>
         </div>
-        {{this.message}}
         {{-- NON FUNZIONA --}}
         <div class="delete-btn">
             <form action="">

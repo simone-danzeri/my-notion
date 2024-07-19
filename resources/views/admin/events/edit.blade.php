@@ -14,8 +14,9 @@
                 </div>
             @endif
             {{-- Errors --}}
-            <form enctype="multipart/form-data" action="" method="POST">
+            <form enctype="multipart/form-data" action="{{route('admin.events.update', ['event' => $event->id])}}" method="POST">
                 @csrf
+                @method('PUT')
                 <div class="mb-3">
                     <label for="title" class="form-label">Title *</label>
                     <input type="text" class="form-control" id="title" name="title" value="{{ old('title', $event->title) }}" required maxlength="255">

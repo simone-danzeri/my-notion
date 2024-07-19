@@ -4,6 +4,15 @@
     @if ($events->isEmpty())
         <p class="text-center mt-5">No events</p>
     @else
+    {{-- Success Message Section --}}
+    <div>
+        @if (session()->has('message'))
+            <div class="alert alert-success">
+                {{ session('message') }}
+            </div>
+        @endif
+    </div>
+    {{-- Success Message Section --}}
     <div class="d-flex flex-wrap">
         @foreach ($events as $event)
         <div class="card my-5 mx-2" style="width: 18rem;">
