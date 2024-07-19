@@ -45,13 +45,15 @@
                 </div>
             </form>
         </div>
-        {{-- NON FUNZIONA --}}
-        <div class="delete-btn">
-            <form action="">
-                <button class="btn btn-danger js-delete-btn" onclick="return confirm('Sei sicuro di voler eliminare tutti i dati?')" data-grocery-title="{{ $groceries }}" type="submit">Delete</button>
+        {{-- BTN per eliminare tutti i prodotti anche da DB --}}
+        <div class="delete-btn mt-5">
+            <form enctype="multipart/form-data" method="POST" action="{{route('admin.groceries.eliminateAll')}}">
+                @csrf
+                @method('DELETE')
+                <button class="btn btn-danger js-delete-btn" onclick="return confirm('Sei sicuro di voler eliminare tutti i dati?')" data-grocery-title="{{ $groceries }}" type="submit">Empty All</button>
             </form>
         </div>
-        {{-- NON FUNZIONA --}}
+        {{-- BTN per eliminare tutti i prodotti anche da DB --}}
     </div>
     {{-- JS per le checkbox laterali --}}
     <script>

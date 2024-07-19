@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Models\Grocery;
+use Illuminate\Support\Facades\DB;
 
 class GroceryController extends Controller
 {
@@ -96,8 +97,7 @@ class GroceryController extends Controller
     }
 
     public function eliminateAll() {
-        dd('ciao');
-        Grocery::truncate();
+        DB::table('groceries')->truncate();
         // DB::table('groceries')->truncate($request->all());
         return redirect()->route('admin.groceries.index');
     }
