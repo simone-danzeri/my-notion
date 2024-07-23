@@ -32,6 +32,9 @@
                     <li class="my-5">
                         <a class="" href="{{route('admin.groceries.index')}}"><i class="fa-solid fa-list-check me-2"></i>Shopping List</a>
                     </li>
+                    <li class="my-5">
+                        <a class="" href="{{route('admin.timer')}}"><i class="fa-solid fa-stopwatch-20 me-2"></i>Timer</a>
+                    </li>
                 </ul>
             </div>
         </div>

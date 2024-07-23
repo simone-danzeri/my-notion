@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\EventController;
 use App\Http\Controllers\Admin\GroceryController;
+use App\Http\Controllers\Admin\TimerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +35,7 @@ Route::middleware(['auth', 'verified'])
     Route::resource('events', EventController::class);
     Route::resource('groceries', GroceryController::class);
     Route::delete('groceries', [GroceryController::class, 'eliminateAll'])->name('groceries.eliminateAll');
+    Route::get('/timer', [TimerController::class, 'index'])->name('timer');
 });
 
 Route::middleware('auth')->group(function () {
