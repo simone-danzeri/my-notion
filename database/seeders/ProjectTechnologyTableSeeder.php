@@ -15,6 +15,14 @@ class ProjectTechnologyTableSeeder extends Seeder
      */
     public function run()
     {
-        //
+        $projectTechnologyArray = config('project_tecnnology');
+        foreach($projectTechnologyArray as $element) {
+            foreach($element['technology_id'] as $technologyId) {
+                DB::table('project_technology')->insert([
+                    'project_id' => $element['project_id'],
+                    'technology_id' => $technologyId,
+                ]);
+            }
+        }
     }
 }
