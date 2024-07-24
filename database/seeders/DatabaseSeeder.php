@@ -5,6 +5,10 @@ namespace Database\Seeders;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 use Database\Seeders\GroceriesTableSeeder;
+use Database\Seeders\TechnologiesTableSeeder;
+use Database\Seeders\TypeSeeder;
+use Database\Seeders\ProjectSeeder;
+use Database\Seeders\ProjectTechnologyTableSeeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -23,6 +27,10 @@ class DatabaseSeeder extends Seeder
         // ]);
         $this->call([
             GroceriesTableSeeder::class,
+            TechnologiesTableSeeder::class,
+            TypeSeeder::class,
+            ProjectSeeder::class,
+            ProjectTechnologyTableSeeder::class,
         ]);
     }
 }
