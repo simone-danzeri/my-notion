@@ -6,6 +6,7 @@ use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\EventController;
 use App\Http\Controllers\Admin\GroceryController;
 use App\Http\Controllers\Admin\TimerController;
+use App\Http\Controllers\Admin\ProjectController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +35,9 @@ Route::middleware(['auth', 'verified'])
     Route::get('/negate-access', [DashboardController::class, 'negate'])->name('negate');
     Route::resource('events', EventController::class);
     Route::resource('groceries', GroceryController::class);
+    Route::resource('projects', ProjectController::class)->parameters([
+        'projects' => 'project:slug'
+    ]);
     Route::delete('groceries', [GroceryController::class, 'eliminateAll'])->name('groceries.eliminateAll');
     Route::get('/timer', [TimerController::class, 'index'])->name('timer');
 });

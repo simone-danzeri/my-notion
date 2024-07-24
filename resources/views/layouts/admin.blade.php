@@ -81,6 +81,11 @@
                                 Empty grocery list
                             </div>
                         @endif
+                        @if (Route::is('admin.projects.show'))
+                        <a href="{{ route('admin.projects.index')}}" class="d-block btn ml-2 border border-light my-3 text-white">
+                            Back to all projects
+                        </a>
+                        @endif
                     </div>
                 </nav>
 
